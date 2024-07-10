@@ -9,6 +9,16 @@
         "array": "c",
         "string": "c",
         "string_view": "c",
-        "vector": "c"
+        "vector": "c",
+        "__config": "c",
+        "__hash_table": "c",
+        "__locale": "c",
+        "bitset": "c",
+        "unordered_map": "c",
+        "functional": "c",
+        "memory": "c",
+        "optional": "c",
+        "system_error": "c",
+        "__node_handle": "c"
     }
 }

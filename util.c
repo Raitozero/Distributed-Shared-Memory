@@ -3,16 +3,17 @@
 #include <stdlib.h>
 
 
-void init(machine nodes[NUM_Machine]){
+void init(){
     srand(time(NULL));
     int random_num = rand();
-    for(int i = 0; i < NUM_Machine; i++){
-        nodes[i].ip_addr = DEFAULT_IP;
-        nodes[i].tcp_port_num = random_num * i;
-        nodes[i].tcp_port_num = random_num * i + 1;
-    }
+    node.ip_addr = DEFAULT_IP;
+    node.tcp_port_num = random_num;
+    node.tcp_port_num = random_num+ 1;
 }
 
+int forThisNode(int curr, msg_t message){
+	return (message.key % NUM_Machine == curr)? 1 : 0;
+}
 
 
 

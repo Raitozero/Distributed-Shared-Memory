@@ -38,11 +38,12 @@ int getFromHT(int key){
 	int index = key/NUM_Machine - 1;
 	if(key < 0 || key > TABLESIZE || hashtable[index].head == NULL){
         printf("get from hashtable failed.\n");
+        return -1;
     }
 	else {
         struct node* tmp = hashtable[index].head;
         while(tmp->next) tmp = tmp->next;
         return tmp->value;
-   	}   
+   	}
 }
 

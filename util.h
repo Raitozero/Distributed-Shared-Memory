@@ -21,12 +21,13 @@ typedef struct msg{
     int NotFound;
     int curr_machine_id;
     int original_machine_id;
-    int original_port_num;
+    int original_port_num; // This is TCP port number, because only tcp port is used to send and recev data.
 } msg_t;
 
 
 enum type{
     GET,
+    PUT,
     GET_FORWARD,
     GET_REPLY,
     PUT_FORWARD,
@@ -37,4 +38,5 @@ enum type{
 
 //functions
 void init();
+void inputMsg(msg_t* message);
 int forThisNode(int curr, msg_t message);
